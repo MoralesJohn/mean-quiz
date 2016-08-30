@@ -1,0 +1,25 @@
+<div id='question'>
+	<div id='nav'>
+		<a href="#/">Home</a>
+		<form>
+			<input type='text' ng-model='filter_name' placeholder='search name...'>
+			<input type='submit' value='Filter'>
+		</form>
+
+	</div>
+	<div id='content'>
+		<form ng-submit='addQuestion()'>
+			<p>Question: </p>
+			<p><input type='text' placeholder='???' ng-model='new_question.quest' minlength='15'></p>
+			<p>Correct Answer </p>
+			<p><input type='text' placeholder='' ng-model='new_question.correct' required></p>
+			<p>Fake Answer 1: </p>
+			<p><input type='text' ng-model='new_question.alt1' required></p>
+			<p>Fake Answer 2: </p>
+			<p><input type='text' ng-model='new_question.alt2' required></p>
+			<input type='submit' value='Create'>
+		</form>
+		
+	</div>
+
+</div>

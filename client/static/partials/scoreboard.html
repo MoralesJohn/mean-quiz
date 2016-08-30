@@ -1,0 +1,29 @@
+<div id='score'>
+	<div id='nav'>
+		<a href="#/question"><button>Add a Question</button></a> | <button ng-click='logout()'>Logout</button>
+	</div>
+	<div ng-show='status'>{{ status }}</div>
+	<div>
+		<p>
+		Ready to play a game?
+		</p>
+		<a href="#/gameplay"><button>Play!</button></a>
+	</div>
+	<div id='content'>
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Score</th>
+				<th>Percentage</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat='player in players | filter: search_text | orderBy: percent:true'>
+					<td>{{player.name}}</td>
+					<td>{{player.score}} / 3</td>
+					<td>{{player.percent}}%</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>

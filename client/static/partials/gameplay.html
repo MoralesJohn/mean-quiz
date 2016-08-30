@@ -1,0 +1,25 @@
+<div>
+	<h3>Hello {{ player_name }}!</h3>
+	<p>Choose the best answer for each question. When you are finished, click Submit.</p>
+	<form ng-submit='ansSubmit()'>
+		<p>1. {{ questions[0].quest }}</p>
+		<fieldset id='q0'>
+			<p><input type="radio" value='1' name="q0" /> {{ questions[0].correct }}</p>
+			<p><input type="radio" value='0' name="q0" /> {{ questions[0].alt2 }}</p>
+			<p><input type="radio" value='0' name="q0" /> {{ questions[0].alt1 }}</p>
+		</fieldset>
+		<p>2. {{ questions[1].quest }}</p>
+		<fieldset id='q1'>
+			<p><input type="radio" value='1' name="q1" /> {{ questions[1].correct }}</p>
+			<p><input type="radio" value='0' name="q1" /> {{ questions[1].alt2 }}</p>
+			<p><input type="radio" value='0' name="q1" /> {{ questions[1].alt1 }}</p>
+		</fieldset>
+		<p>1. {{ questions[2].quest }}</p>
+		<fieldset id='q2'>
+			<p><input type="radio" value='1' name="q2" /> {{ questions[2].correct }}</p>
+			<p><input type="radio" value='0' name="q2" /> {{ questions[2].alt2 }}</p>
+			<p><input type="radio" value='0' name="q2" /> {{ questions[2].alt1 }}</p>
+		</fieldset>
+		<input type="submit" name="Submit">
+	</form>
+</div>
